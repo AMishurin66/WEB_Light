@@ -14,9 +14,9 @@ NTPClient timeClient(ntpUDP, "pool.ntp.org");               // define NTP Client
 ESP8266WebServer HttpServer(SERVERPORT);
 ESP8266HTTPUpdateServer httpUpdater;
 
-String ssid = "NETGEAR";                               // SSID WiFi
-String password = "12345678_1Q";                       // password WiFi
-String confFile = "def_t.txt";                         // config file
+String ssid1 = "NETGEAR";                                   // SSID WiFi
+String password = "12345678_1Q";                            // password WiFi
+String confFile = "def_t.txt";                              // config file
 const int LEDpin = 2;                                       // GPIO LED pin
 bool LED_on = false;                                        // LED State
 String outputLightState = "OFF";                            // variables to store the current light state
