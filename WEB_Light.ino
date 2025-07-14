@@ -7,8 +7,6 @@
 WiFiUDP ntpUDP;
 NTPClient timeClient(ntpUDP, "pool.ntp.org");               // define NTP Client to get time
 
-const char* ssid = "NETGEAR";                               // SSID WiFi
-const char* password = "12345678_1Q";                       // password WiFi
 #define OTAUSER         ""                                  // login page OTA
 #define OTAPASSWORD     ""                                  // password page OTA
 #define OTAPATH         "/firmware"                         // url OTA
@@ -16,7 +14,9 @@ const char* password = "12345678_1Q";                       // password WiFi
 ESP8266WebServer HttpServer(SERVERPORT);
 ESP8266HTTPUpdateServer httpUpdater;
 
-const char* confFile = "def_t.txt";                         // config file
+String ssid = "NETGEAR";                               // SSID WiFi
+String password = "12345678_1Q";                       // password WiFi
+String confFile = "def_t.txt";                         // config file
 const int LEDpin = 2;                                       // GPIO LED pin
 bool LED_on = false;                                        // LED State
 String outputLightState = "OFF";                            // variables to store the current light state
